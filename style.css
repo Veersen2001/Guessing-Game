@@ -1,7 +1,10 @@
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-  width: 98%;
-  height: 729px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,8 +14,11 @@ body {
   background-size: cover;
 }
 .main {
-  position: absolute;
-  top: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
   border: 2px solid rgb(217, 214, 214);
   padding: 30px;
   border-radius: 30px;
@@ -39,16 +45,23 @@ p{
   text-align: center;
 }
 #inputbox{
-  width: 50px;
+  width: 30%;
   height: 30px;
   text-align: center;
+  caret-color: red;
+  font-weight: 600;
 }
 input{
   font-weight: 650;
+  
 }
 button{
   padding: 8px 10px;
   font-weight: 700;
   font-size: 15px;
   border-radius: 10px;
+
+}
+button:hover{
+  transform: scale(0.9);
 }
