@@ -1,39 +1,54 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body{
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+body {
+  width: 98%;
+  height: 729px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgb(194, 157, 157),rgb(168, 65, 65));
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.main{
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0,0,0,1);
-    justify-content: center;
-    gap: 10px;
-   padding:10px 30px;
-   flex-wrap: wrap;
+.main {
+  position: absolute;
+  top: 200px;
+  border: 2px solid rgb(217, 214, 214);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 10px lightgray;
+  background-image:linear-gradient(rgb(194, 157, 157),rgb(65, 168, 163));
+  
 }
-#range
-{
-    border: 1px solid black;
-    width: 60px;
-    text-align: center;
+p{
+  font-weight: 650;
+  font-size: 16px;
+  text-align: center;
+}
+#select{
+  padding: 5px;
+  color: black;
+  font-weight: 600;
+}
+#range{
+  width: 78px;
+  text-align: center;
+}
+#attempt{
+  width: 30px;
+  text-align: center;
+}
+#inputbox{
+  width: 50px;
+  height: 30px;
+  text-align: center;
 }
 input{
-    font-size: 20px;
-    caret-color: red;
-    padding: 5px 10px;
-    width: 40%;
-    font-weight: 500;
+  font-weight: 650;
 }
-label{
-    font-weight: 600;
-
+button{
+  padding: 8px 10px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 10px;
 }
