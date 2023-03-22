@@ -1,81 +1,57 @@
-const inputBox = document.getElementById('inputBox');
-const resultbtn = document.getElementById('ans');
-const restartBtn = document.getElementById('restart');
-const matchResult = document.getElementById('matchResult');
-
-const range = document.getElementById('range');
-let attempt = document.getElementById('attempt');
-const select = document.getElementById('select');
-
+const result = document.getElementById("result");
+const inputbox = document.getElementById("inputbox");
+const btn = document.getElementById("button");
+let range = document.getElementById("range");
+let tattempt = document.getElementById("attempt");
+const Restart = document.getElementById("restart");
+let select = document.getElementById('select');
+let computerGuess = null;
 let count = 0;
-let computerGuess=null;
-select.addEventListener('click',()=>
-{
- 
-
- if(select.value == 'hard')
- {
-      computerGuess = Math.floor(Math.random() * 100);
-     range.innerText = '0-100';
-
-     // default math value 0 or 1 or floor 6.7 = 6
-
- }
- else if(select.value == 'Medium')
- {
-     computerGuess = Math.floor(Math.random() * 50);
-        range.innerText = '0-50';
-       
-        
-    // // default math value 0 or 1 or floor 6.7 = 6
- }
- else
- {
-     computerGuess = Math.floor(Math.random() * 10);
-       range.innerText = '0-10';
-
- }
-
-});
-
-
-
-
-resultbtn.addEventListener('click',()=>{
-    const userGuess = Number(inputBox.value);
-    console.log(computerGuess);
-
-    if(select.value == 'select_option'){
-        alert("please Select Level");
-        count = 0;
-    }
-    // Number() -> change string to number
-    if(userGuess === computerGuess)
-    {
-        attempt.value = ++count;
-        matchResult.innerText = ' Congratulation🎉🎊! Won the match';
-    } 
-    else if (computerGuess > userGuess) {
-        attempt.value = ++count;
-        matchResult.innerText = "Guess a greater number";
-    } 
-    else {
-        attempt.value = ++count;
-        matchResult.innerText = "Guess a smaller number";
-    }
-});
-
-
-restartBtn.addEventListener('click',() =>{
-
-    // inputBox.value = null;
-    // count = 0;
-    // attempt.value = 0;
-    window.location.reload();
+select.addEventListener('click', ()=>{
+  if(select.value=='easy')
+  {
+    computerGuess = Math.floor(Math.random()*10);
     
-
-
+    range.value='0-10';
+  }
+  else if(select.value=='medium')
+  {
+    computerGuess = Math.floor(Math.random()*50);
+    range.value='0-50';
+  }
+  else{
+    computerGuess = Math.floor(Math.random()*100);
+    range.value='0-100';
+  }
 })
 
 
+btn.addEventListener("click", () => {
+  const userGuess = Number(inputbox.value);
 
+  if(select.value == ''){
+    alert("Please Select Level First🤦‍♂️");
+}
+else{
+  if (computerGuess === userGuess) {
+    result.innerText = "Congratulation🎉💫You won the game";
+    count = count + 1;
+  } else if (computerGuess > userGuess) {
+    result.innerText = "Sorry! 🫡please guess larger number";
+    count = count + 1;
+  } else {
+    result.innerText = "Sorry!😒 please guess Smaller number";
+    count = count + 1;
+  }
+  tattempt.value = count;
+}
+  
+});
+
+Restart.addEventListener("click", () => {
+  tattempt.value = 0;
+  inputbox.value = null;
+  range.value='-'
+  select.value=''
+  result.innerText="Guess the Number"
+});
