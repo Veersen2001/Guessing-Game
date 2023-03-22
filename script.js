@@ -11,12 +11,9 @@ let count = 0;
 let computerGuess=null;
 select.addEventListener('click',()=>
 {
- if(select.value == 'select_option'){
-    alert('please select Level!!! ');
+ 
 
- }
-
- else if(select.value == 'hard')
+ if(select.value == 'hard')
  {
       computerGuess = Math.floor(Math.random() * 100);
      range.innerText = '0-100';
@@ -48,7 +45,10 @@ resultbtn.addEventListener('click',()=>{
     const userGuess = Number(inputBox.value);
     console.log(computerGuess);
 
-   
+    if(select.value == 'select_option'){
+        alert("please Select Level");
+
+    }
 
      attempt.value = ++count; 
     // Number() -> change string to number
