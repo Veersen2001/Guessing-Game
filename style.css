@@ -14,9 +14,11 @@ body{
 .main{
     display: flex;
     flex-direction: column;
-    
+    box-shadow: 0 10px 30px rgba(0,0,0,1);
     justify-content: center;
     gap: 10px;
+   padding:10px 30px;
+   flex-wrap: wrap;
 }
 #range
 {
@@ -28,4 +30,10 @@ input{
     font-size: 20px;
     caret-color: red;
     padding: 5px 10px;
+    width: 40%;
+    font-weight: 500;
+}
+label{
+    font-weight: 600;
+
 }

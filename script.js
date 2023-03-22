@@ -47,19 +47,20 @@ resultbtn.addEventListener('click',()=>{
 
     if(select.value == 'select_option'){
         alert("please Select Level");
-
+        count = 0;
     }
-
-     attempt.value = ++count; 
     // Number() -> change string to number
     if(userGuess === computerGuess)
     {
+        attempt.value = ++count;
         matchResult.innerText = ' Congratulation🎉🎊! Won the match';
     } 
     else if (computerGuess > userGuess) {
+        attempt.value = ++count;
         matchResult.innerText = "Guess a greater number";
     } 
     else {
+        attempt.value = ++count;
         matchResult.innerText = "Guess a smaller number";
     }
 });
@@ -67,9 +68,10 @@ resultbtn.addEventListener('click',()=>{
 
 restartBtn.addEventListener('click',() =>{
 
-    inputBox.value = null;
-    attempt.value = 0
-    
+    // inputBox.value = null;
+    // count = 0;
+    // attempt.value = 0;
+    window.location.reload();
     
 
 
