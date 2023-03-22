@@ -54,7 +54,7 @@ resultbtn.addEventListener('click',()=>{
     // Number() -> change string to number
     if(userGuess === computerGuess)
     {
-        matchResult.innerText = 'Won the match';
+        matchResult.innerText = ' Congratulation🎉🎊! Won the match';
     } 
     else if (computerGuess > userGuess) {
         matchResult.innerText = "Guess a greater number";
