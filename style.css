@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    gap: 10px;
+}
+#range
+{
+    border: 1px solid black;
+    width: 60px;
+    text-align: center;
+}
+input{
+    font-size: 20px;
+    caret-color: red;
+    padding: 5px 10px;
+}
